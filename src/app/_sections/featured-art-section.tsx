@@ -5,17 +5,17 @@ import Link from "next/link";
 export default function FeaturedArtSection() {
   const featureImages: string[] = [
     "1",
-    "2",
-    "3",
     "4",
+    "3",
     "5",
-    "6",
-    "7",
-    "8",
-    "9",
-    "10",
-    "11",
-    "12",
+    "0",
+    "2",
+    "4",
+    "1",
+    "2",
+    "0",
+    "3",
+    "1",
   ];
   return (
     <section className="flex flex-col gap-2">
@@ -27,11 +27,11 @@ export default function FeaturedArtSection() {
           return (
             <Link
               key={i}
-              href={"/gallery"}
-              className="md:hover:scale-125 md:hover:transition-transform"
+              href={"/gallery/" + e}
+              className="md:hover:scale-150 md:hover:z-50 md:hover:transition-transform"
             >
               <div className=" relative h-28 w-28 md:h-40 md:w-40">
-                <Image className="rounded" src={""} alt="" fill />
+                <Image className="rounded" src={`/${e}.png`} alt="" fill />
               </div>
             </Link>
           );
